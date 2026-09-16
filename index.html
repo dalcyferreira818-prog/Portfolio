@@ -4,37 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cajupary - Anos 60</title>
-   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    
-    html, body { 
-        height: 100%; 
-        overflow: hidden; 
-        background-color: #556B2F; 
+<style>
+    /* Trava a rolagem horizontal na janela principal */
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        background-color: #556B2F;
     }
 
     .topo-audio {
+        width: 100%;
         height: 70px;
-        background-color: #556B2F; 
+        background-color: #556B2F;
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 0 10px;
     }
 
     .topo-audio audio {
-        width: 600px;
-        max-width: 90%;
-        height: 45px;
-    }
-
-    /* ESSA LINHA TIRA A CAIXA/FUNDO DO PLAYER */
-    .topo-audio audio::-webkit-media-controls-panel {
-        background-color: transparent !important;
+        width: 100%;
+        max-width: 600px;
+        height: 40px;
     }
 
     iframe {
         width: 100%;
-        height: calc(100vh - 60px);
+        height: calc(100vh - 70px);
         border: none;
         display: block;
     }
