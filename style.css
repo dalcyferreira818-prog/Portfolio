@@ -89,17 +89,27 @@ audio::-webkit-media-controls-panel {
 
 /* Regras específicas para celulares */
 @media (max-width: 768px) {
-    .container {
-        width: 100%;
-        padding: 0 15px;
+
+    /* 1. Empilha os elementos pai das imagens (seja tabela ou div flex) */
+    tr, .galeria, .container-imagens {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 15px !important;
+        width: 100% !important;
     }
 
-    .caixa-audio audio {
-        max-width: 100%;
+    td {
+        display: block !important;
+        width: 100% !important;
     }
 
-    /* Reduz levemente o espaço das imagens no celular */
+    /* 2. Padroniza o tamanho e a proporção de todas as imagens */
     img {
-        margin: 5px auto;
+        width: 100% !important;
+        max-width: 350px !important; /* Limita a largura para não ficarem gigantes */
+        height: 220px !important;    /* Força todas a terem a mesma altura */
+        object-fit: cover !important;/* Corta o excesso da imagem sem distorcer ou esticar */
+        margin: 0 auto !important;
     }
 }
