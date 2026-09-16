@@ -27,14 +27,22 @@ a {
 
 table {
     margin: auto;
+    max-width: 100%; /* Evita que tabelas grandes vazem a tela */
 }
 
+/* Regra corrigida para imagens responsivas */
 img {
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    padding: 5px 10px;
-    margin: 10px;
+    padding: 5px;
+    margin: 10px auto;
+    
+    /* Propriedades vitais de responsividade */
+    max-width: 100%; 
+    height: auto;
+    display: inline-block;
+
     transition: transform 0.2s ease;
 }
 
@@ -88,5 +96,10 @@ audio::-webkit-media-controls-panel {
 
     .caixa-audio audio {
         max-width: 100%;
+    }
+
+    /* Reduz levemente o espaço das imagens no celular */
+    img {
+        margin: 5px auto;
     }
 }
